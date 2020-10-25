@@ -30,12 +30,18 @@ project "BaseLib"
 
 		defines
 		{
-
+			"BASE_LIB_EXPORTS"
 		}
 
 		postbuildcommands
 		{
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/BaseSandbox")
+		}
+
+	filter "system:unix"
+		defines
+		{
+			"_UNIX"
 		}
 	
 	filter "configurations:Debug"

@@ -1,3 +1,5 @@
 #pragma once
 
-void say_hello();
+#include "BaseLib.h"
+
+LIB_API void say_hello();
